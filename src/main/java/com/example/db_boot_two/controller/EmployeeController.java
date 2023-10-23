@@ -44,4 +44,9 @@ public class EmployeeController {
     public Employee updateEmployee(@PathVariable("id") int id, @RequestBody Employee employee) {
         return service.updateEmployee(id, employee);
     }
+
+    @GetMapping("/wallah/{name}")
+    public List<Employee> getByname(@PathVariable("name") String name) {
+        return service.findEmplWithName(name);
+    }
 }

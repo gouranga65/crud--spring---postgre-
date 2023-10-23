@@ -41,4 +41,9 @@ public class EmployeeService {
         return repo.save(employee);
 
     }
+
+    public List<Employee> findEmplWithName(String name) {
+        return repo.findByName(name);
+    }
+
 }
